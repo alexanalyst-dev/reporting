@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Organization and Architecture</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6d8b5b6d5d.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="bg-gradient"></div>
+
+<div class="bg-aurora aurora-1"></div>
+<div class="bg-aurora aurora-2"></div>
+
+<div class="bg-grid"></div>
+
+<div class="bg-blueprint"></div>
+
+<div class="bg-noise"></div>
+
+<div class="vignette"></div>
+
+<div class="mouse-light"></div>
+<div class="scan-line"></div>
+
+<header class="topbar">
+
+    <div class="chapter-number">
+        CHAPTER 01
+    </div>
+
+    <div class="counter" aria-live="polite">
+        <span id="currentSlide">01</span>
+        /
+        <span id="totalSlides">20</span>
+    </div>
+
+</header>
+
+<main id="presentation">
+
+    <!-- ==================== -->
+    <!-- SLIDE 1 -->
+    <!-- ==================== -->
+
+    <section class="slide active">
+
+        <div class="hero">
+
+            <div class="hero-line"></div>
+
+            <p class="small-title">
+                BSCS 3D
+            </p>
+<h1>
+
+    <span class="reveal r1">COMPUTER</span>
+
+    <br>
+
+    <span class="reveal r2">ORGANIZATION</span>
+
+    <br>
+
+    <span class="reveal r3 accent">AND ARCHITECTURE</span>
+
+</h1>
+
+            <p class="subtitle">
+
+                Basic Concepts
+                &
+                Computer Evolution
+
+            </p>
+
+            <button class="start-btn">
+
+                CLICK HERE TO START THE PRESENTATION
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+            <button class="members-btn" id="membersBtn">
+
+                <i class="fa-solid fa-users"></i>
+                Members
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ==================== -->
+    <!-- MEMBERS OVERLAY -->
+    <!-- ==================== -->
+
+    <div class="members-overlay" id="membersOverlay">
+
+        <div class="members-panel">
+
+            <button class="members-close" id="membersClose" aria-label="Close members list">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <p class="members-title">PAPAYA SA TINOLA</p>
+            <p class="members-subtitle">BSCS 3D &nbsp;•&nbsp; GROUP MEMBERS</p>
+
+            <div class="avengers-wrap">
+
+                <div class="avengers-frame" id="avengersFrame">
+
+                    <button class="back-btn avengers-back" id="avengersBack" tabindex="0">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to full team
+                    </button>
+
+                    <div class="avengers-stage" id="avengersStage">
+
+                        <img src="bscs avengers.jpg" alt="Avengers group template — team member photos go in the blank faces" class="avengers-img">
+
+                        <div class="hotspot" data-info="black_widow" data-label="Black Widow" data-ox="9" data-oy="42" tabindex="0" role="button" aria-label="Black Widow" style="left:2%;top:30%;width:14%;height:24%;"></div>
+                        <div class="hotspot" data-info="nick_fury" data-label="Nick Fury" data-ox="19.5" data-oy="24" tabindex="0" role="button" aria-label="Hawkeye" style="left:13%;top:13%;width:13%;height:22%;"></div>
+                        <div class="hotspot" data-info="iron_man" data-label="Iron Man" data-ox="32" data-oy="31" tabindex="0" role="button" aria-label="Iron Man" style="left:25%;top:20%;width:14%;height:22%;"></div>
+                        <div class="hotspot" data-info="hulk" data-label="Hulk" data-ox="48.5" data-oy="12" tabindex="0" role="button" aria-label="Hulk" style="left:40%;top:0%;width:17%;height:24%;"></div>
+                        <div class="hotspot" data-info="cap_america" data-label="Captain America" data-ox="50.5" data-oy="31" tabindex="0" role="button" aria-label="Captain America" style="left:43%;top:20%;width:15%;height:22%;"></div>
+                        <div class="hotspot" data-info="thor" data-label="Thor" data-ox="71.5" data-oy="27" tabindex="0" role="button" aria-label="Thor" style="left:64%;top:15%;width:15%;height:24%;"></div>
+                        <div class="hotspot" data-info="hawkeye" data-label="Hawkeye" data-ox="91" data-oy="37" tabindex="0" role="button" aria-label="Nick Fury" style="left:83%;top:24%;width:16%;height:26%;"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="info-panel" id="avengersInfo">
+                    <h4>Meet the team</h4>
+                    <p>Hover to see a glow, click a character to zoom in and read who they are. Each blank face is where a member's photo goes.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==================== -->
+    <!-- SLIDE 2 — 1.1 Organization vs Architecture -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.1 &nbsp;ORGANIZATION AND ARCHITECTURE</p>
+            <h2>Organization vs. Architecture</h2>
+            <p class="lead">Two terms often used together, but they describe different layers of a computer system.</p>
+
+            <div class="grid-2">
+                <div class="definition-box">
+                    <h3>Computer Architecture</h3>
+                    <p>The attributes of a system that are visible to a programmer — the ones that directly affect how a program executes. Also called Instruction Set Architecture (ISA): instruction formats, opcodes, registers, and how instructions affect memory.</p>
+                </div>
+                <div class="definition-box">
+                    <h3>Computer Organization</h3>
+                    <p>The operational units and their interconnections that actually realize the architecture — hardware details invisible to the programmer, like control signals, peripheral interfaces, and memory technology.</p>
+                </div>
+            </div>
+
+            <div class="callout">
+                <p><strong>Example:</strong> Whether a computer has a multiply instruction is an architecture decision. Whether that instruction is built as its own hardware unit or done through repeated addition is an organization decision.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 3 — 1.2 Four Basic Functions -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.2 &nbsp;STRUCTURE AND FUNCTION</p>
+            <h2>Four Basic Functions of a Computer</h2>
+            <p class="lead">Despite their complexity, every computer only ever does four things.</p>
+
+            <div class="grid-4">
+                <div class="card">
+                    <span class="tag">01</span>
+                    <h3>Data Processing</h3>
+                    <p>Transforming data — the range of forms and requirements is broad, but the fundamental processing methods are few.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">02</span>
+                    <h3>Data Storage</h3>
+                    <p>Short-term storage for data being worked on right now, plus long-term storage of files for later retrieval.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">03</span>
+                    <h3>Data Movement</h3>
+                    <p>Input/output (I/O) when moving data to or from a directly connected device; data communications when moving it over longer distances.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">04</span>
+                    <h3>Control</h3>
+                    <p>A control unit manages the computer's resources and directs its functional parts based on instructions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 4 — 1.2 Structural Components (INTERACTIVE) -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.2 &nbsp;STRUCTURE AND FUNCTION</p>
+            <h2>Structural Components</h2>
+            <p class="lead">Click a component to see what it does. Click the CPU to zoom into its internals.</p>
+
+            <div class="diagram-wrap">
+
+                <div class="cpu-diagram" id="diagramComputer">
+
+                    <!-- LEVEL 1: COMPUTER -->
+                    <div class="diagram-view active" data-view="view-computer">
+
+                        <p class="diagram-title">COMPUTER</p>
+
+                        <div class="diagram-row">
+                            <div class="node" data-info="io" data-label="I/O" tabindex="0" role="button">I/O</div>
+                            <div class="node" data-info="memory" data-label="Main Memory" tabindex="0" role="button">Main Memory</div>
+                        </div>
+
+                        <div class="bus-line">SYSTEM BUS</div>
+
+                        <div class="diagram-row single">
+                            <div class="node node-zoom" data-info="cpu" data-zoom-target="view-cpu" data-label="CPU" tabindex="0" role="button">
+                                CPU
+                                <span class="zoom-hint">click to zoom in</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- LEVEL 2: CPU -->
+                    <div class="diagram-view" data-view="view-cpu" data-parent="view-computer">
+
+                        <button class="back-btn" tabindex="0">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back
+                        </button>
+
+                        <p class="diagram-title">CPU</p>
+
+                        <div class="diagram-row">
+                            <div class="node" data-info="registers" data-label="Registers" tabindex="0" role="button">Registers</div>
+                            <div class="node" data-info="alu" data-label="ALU" tabindex="0" role="button">ALU</div>
+                        </div>
+
+                        <div class="bus-line">INTERNAL BUS</div>
+
+                        <div class="diagram-row single">
+                            <div class="node node-zoom" data-info="control" data-zoom-target="view-control-unit" data-label="Control Unit" tabindex="0" role="button">
+                                Control Unit
+                                <span class="zoom-hint">click to zoom in</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- LEVEL 3: CONTROL UNIT -->
+                    <div class="diagram-view" data-view="view-control-unit" data-parent="view-cpu">
+
+                        <button class="back-btn" tabindex="0">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back
+                        </button>
+
+                        <p class="diagram-title">CONTROL UNIT</p>
+
+                        <div class="diagram-row">
+                            <div class="node" data-info="sequencing" data-label="Sequencing Logic" tabindex="0" role="button">Sequencing Logic</div>
+                            <div class="node" data-info="curegs" data-label="Control Unit Registers &amp; Decoders" tabindex="0" role="button">Registers &amp; Decoders</div>
+                            <div class="node" data-info="cumemory" data-label="Control Memory" tabindex="0" role="button">Control Memory</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="info-panel">
+                    <h4>Tap a component</h4>
+                    <p>Click any box in the diagram to see what it does. Boxes with a purple outline zoom into their own internal structure.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 5 — 1.2 Multicore Structure (INTERACTIVE) -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.2 &nbsp;STRUCTURE AND FUNCTION</p>
+            <h2>The Multicore Computer</h2>
+            <p class="lead">Same idea as before, zoomed one level deeper — from the motherboard, into the processor chip, into a single core.</p>
+
+            <div class="diagram-wrap">
+
+                <div class="cpu-diagram" id="diagramMotherboard">
+
+                    <!-- LEVEL 1: MOTHERBOARD -->
+                    <div class="diagram-view active" data-view="view-motherboard">
+
+                        <p class="diagram-title">MOTHERBOARD</p>
+
+                        <div class="diagram-row">
+                            <div class="node" data-info="mbmem" data-label="Main Memory Chips" tabindex="0" role="button">Main Memory Chips</div>
+                            <div class="node node-zoom" data-info="mbproc" data-zoom-target="view-processor-chip" data-label="Processor Chip" tabindex="0" role="button">
+                                Processor Chip
+                                <span class="zoom-hint">click to zoom in</span>
+                            </div>
+                            <div class="node" data-info="mbio" data-label="I/O Chips" tabindex="0" role="button">I/O Chips</div>
+                        </div>
+
+                    </div>
+
+                    <!-- LEVEL 2: PROCESSOR CHIP -->
+                    <div class="diagram-view" data-view="view-processor-chip" data-parent="view-motherboard">
+
+                        <button class="back-btn" tabindex="0">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back
+                        </button>
+
+                        <p class="diagram-title">PROCESSOR CHIP</p>
+
+                        <div class="diagram-row">
+                            <div class="node node-zoom" data-info="pccores" data-zoom-target="view-core" data-label="Cores (×8)" tabindex="0" role="button">
+                                Cores (×8)
+                                <span class="zoom-hint">click to zoom in</span>
+                            </div>
+                            <div class="node" data-info="pcl3" data-label="L3 Cache" tabindex="0" role="button">L3 Cache</div>
+                        </div>
+
+                    </div>
+
+                    <!-- LEVEL 3: CORE -->
+                    <div class="diagram-view" data-view="view-core" data-parent="view-processor-chip">
+
+                        <button class="back-btn" tabindex="0">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back
+                        </button>
+
+                        <p class="diagram-title">CORE</p>
+
+                        <div class="diagram-row">
+                            <div class="node" data-info="coreinstr" data-label="Instruction Logic" tabindex="0" role="button">Instruction Logic</div>
+                            <div class="node" data-info="corealu" data-label="ALU" tabindex="0" role="button">ALU</div>
+                            <div class="node" data-info="coreload" data-label="Load/Store Logic" tabindex="0" role="button">Load/Store Logic</div>
+                        </div>
+
+                        <div class="diagram-row">
+                            <div class="node" data-info="corel1i" data-label="L1 Instruction Cache" tabindex="0" role="button">L1 I-Cache</div>
+                            <div class="node" data-info="corel1d" data-label="L1 Data Cache" tabindex="0" role="button">L1 Data Cache</div>
+                            <div class="node" data-info="corel2i" data-label="L2 Instruction Cache" tabindex="0" role="button">L2 I-Cache</div>
+                            <div class="node" data-info="corel2d" data-label="L2 Data Cache" tabindex="0" role="button">L2 Data Cache</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="info-panel">
+                    <h4>Tap a component</h4>
+                    <p>Click any box to see what it does. Boxes with a purple outline zoom in — from the motherboard, into the chip, into one core.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 6 — 1.3 First Generation -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.3 &nbsp;A BRIEF HISTORY OF COMPUTERS</p>
+            <h2>First Generation — Vacuum Tubes</h2>
+            <p class="lead">The earliest computers used vacuum tubes for logic and memory. The landmark machine of this era: the IAS computer.</p>
+
+            <div class="card">
+                <h3>The Stored-Program Concept</h3>
+                <p>First proposed by John von Neumann in 1945 (Alan Turing developed a similar idea around the same time). Instead of rewiring a machine for every new task, both data and instructions live together in memory — the foundation of every general-purpose computer since.</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>IAS Computer (1952, Princeton):</strong> built from a main memory, an ALU, a control unit, and I/O equipment — the same four building blocks still used to describe computers today.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 7 — 1.3 Second Generation -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.3 &nbsp;A BRIEF HISTORY OF COMPUTERS</p>
+            <h2>Second Generation — Transistors</h2>
+            <p class="lead">Invented at Bell Labs in 1947, the transistor was smaller, cheaper, and cooler-running than the vacuum tube — and it defined this new generation once transistorized computers hit the market in the late 1950s.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>What Changed</h3>
+                    <p>More complex ALUs and control units, the rise of high-level programming languages, and the first system software for loading programs and running common routines.</p>
+                </div>
+                <div class="card">
+                    <h3>IBM 7094</h3>
+                    <p>Introduced the data channel — an independent I/O module with its own processor — and the multiplexor, freeing the CPU from handling I/O directly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 8 — 1.3 Third Generation -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.3 &nbsp;A BRIEF HISTORY OF COMPUTERS</p>
+            <h2>Third Generation — Integrated Circuits</h2>
+            <p class="lead">The 1958 invention of the integrated circuit let an entire circuit be etched onto a single piece of silicon instead of wiring together separate components.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>IBM System/360</h3>
+                    <p>Announced in 1964 — a whole family of compatible machines. Broke compatibility with older IBM systems but became the decade's biggest success, and its architecture still underlies IBM mainframes today.</p>
+                </div>
+                <div class="card">
+                    <h3>DEC PDP-8</h3>
+                    <p>A "minicomputer" cheap and small enough for a lab bench. Introduced the bus structure — the Omnibus — a shared set of signal paths that became standard for microcomputers, replacing System/360's central-switched design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 9 — Computer Generations Table -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.3 &nbsp;A BRIEF HISTORY OF COMPUTERS</p>
+            <h2>Computer Generations at a Glance</h2>
+            <p class="lead">Each generation brought a jump in processing performance built on new hardware technology.</p>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Gen</th>
+                            <th>Dates</th>
+                            <th>Technology</th>
+                            <th>Typical Speed (ops/sec)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>1946–1957</td><td>Vacuum tube</td><td>40,000</td></tr>
+                        <tr><td>2</td><td>1957–1964</td><td>Transistor</td><td>200,000</td></tr>
+                        <tr><td>3</td><td>1965–1971</td><td>Small/medium-scale integration</td><td>1,000,000</td></tr>
+                        <tr><td>4</td><td>1972–1977</td><td>Large scale integration</td><td>10,000,000</td></tr>
+                        <tr><td>5</td><td>1978–1991</td><td>Very large scale integration</td><td>100,000,000</td></tr>
+                        <tr><td>6</td><td>1991–present</td><td>Ultra large scale integration</td><td>&gt;1,000,000,000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 10 — Moore's Law -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.3 &nbsp;A BRIEF HISTORY OF COMPUTERS</p>
+            <h2>Moore's Law</h2>
+            <p class="lead">In 1965, Intel co-founder Gordon Moore observed that the number of transistors on a chip was doubling every year — a pace that later settled to roughly every 18 months, and held for decades.</p>
+
+            <ul class="list-check">
+                <li>Chip <strong>cost stays flat</strong> even as density grows, so cost per unit of logic/memory keeps falling</li>
+                <li>Components packed closer together means <strong>shorter electrical paths</strong> and higher speed</li>
+                <li>Computers get <strong>smaller</strong>, fitting into more environments</li>
+                <li><strong>Lower power</strong> requirements</li>
+                <li>Fewer inter-chip connections means <strong>higher reliability</strong> than soldered joints</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 11 — Semiconductor Memory & Microprocessors -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.3 &nbsp;A BRIEF HISTORY OF COMPUTERS</p>
+            <h2>Later Generations: Memory &amp; Microprocessors</h2>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Semiconductor Memory</h3>
+                    <p>Magnetic-core memory ruled the 1950s–60s. In 1970, Fairchild's semiconductor memory chip proved faster and eventually cheaper — by 1974 its price per bit dropped below core memory, kicking off a rapid, ongoing decline in memory cost.</p>
+                </div>
+                <div class="card">
+                    <h3>Birth of the Microprocessor</h3>
+                    <p>Intel's 4004 (1971) packed an entire CPU onto one chip for the first time. It could barely add and multiply, but it started the evolution that led through the 8008 (1972) to the 8080 (1974) — the first true general-purpose microprocessor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 12 — 1.4 x86 Evolution -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.4 &nbsp;THE EVOLUTION OF THE INTEL X86 ARCHITECTURE</p>
+            <h2>Nearly 40 Years of x86</h2>
+            <p class="lead">From the 1978 8086 to today's Core processors, x86 has stayed backward compatible the entire way — new instructions keep getting added, but old ones are never removed.</p>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>Processor</th><th>Introduced</th><th>Bus Width</th><th>Transistors</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>8086</td><td>1978</td><td>16-bit</td><td>29,000</td></tr>
+                        <tr><td>80386</td><td>1985</td><td>32-bit</td><td>275,000</td></tr>
+                        <tr><td>Pentium</td><td>1993</td><td>32-bit</td><td>3.1 million</td></tr>
+                        <tr><td>Pentium II</td><td>1997</td><td>64-bit</td><td>7.5 million</td></tr>
+                        <tr><td>Core i7 EE 4960X</td><td>2013</td><td>64-bit</td><td>1.86 billion</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="callout">
+                <p>From 1978 to 2013, clock speed jumped roughly 800x and transistor count grew about 64,000x — yet the chip stayed roughly the same size and cost.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 13 — 1.5 Embedded Systems + IoT -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.5 &nbsp;EMBEDDED SYSTEMS</p>
+            <h2>Embedded Systems &amp; the IoT</h2>
+            <p class="lead">An embedded system is electronics and software built into a product — not a general-purpose computer. Billions ship every year, tucked inside phones, appliances, cars, and countless sensors.</p>
+
+            <h3>Four Generations of Internet Deployment</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">IT</span>
+                    <p>PCs, servers, routers — bought by enterprise IT, mostly wired.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">OT</span>
+                    <p>Machinery with embedded intelligence (medical devices, SCADA) bought by non-IT operations teams.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">Personal Tech</span>
+                    <p>Smartphones, tablets, eBook readers — consumer devices, wireless.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">Sensor/Actuator</span>
+                    <p>Single-purpose wireless devices — this generation is what we call the IoT.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 14 — Processor & Chip Terminology -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.5 &nbsp;EMBEDDED SYSTEMS</p>
+            <h2>Getting the Terms Straight</h2>
+
+            <div class="grid-2">
+                <div class="definition-box">
+                    <h3>Application Processor</h3>
+                    <p>General-purpose enough to run a full OS like Linux or Android — e.g. a smartphone's main chip.</p>
+                </div>
+                <div class="definition-box">
+                    <h3>Dedicated Processor</h3>
+                    <p>Built for one job or a small set of tasks, which lets it be smaller and cheaper.</p>
+                </div>
+                <div class="definition-box">
+                    <h3>Microprocessor</h3>
+                    <p>A general-purpose chip — registers, ALU, control logic, often multiple cores and cache.</p>
+                </div>
+                <div class="definition-box">
+                    <h3>Microcontroller</h3>
+                    <p>A "computer on a chip" — processor plus ROM, RAM, clock, and I/O control all in one, optimized for low cost and low power rather than raw speed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 15 — Embedded vs Deeply Embedded -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.5 &nbsp;EMBEDDED SYSTEMS</p>
+            <h2>Embedded vs. Deeply Embedded</h2>
+            <p class="lead">A deeply embedded system is a stricter subset of embedded systems — one whose behavior is hard to observe by either the programmer or the user.</p>
+
+            <ul class="list-check">
+                <li>Runs on a <strong>microcontroller</strong>, not a general microprocessor</li>
+                <li><strong>Not reprogrammable</strong> once its logic is burned into ROM</li>
+                <li><strong>No user interaction</strong> at all</li>
+                <li>Often wireless, deployed in large sensor networks — and a major driver of the IoT</li>
+                <li>Operates under extreme constraints on memory, size, time, and power</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 16 — 1.6 ARM Architecture -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.6 &nbsp;ARM ARCHITECTURE</p>
+            <h2>ARM Architecture</h2>
+            <p class="lead">A RISC-based processor family that started life as the Acorn RISC Machine in 1980s Britain — today, arguably the most widely used processor architecture in the world.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>The Licensing Model</h3>
+                    <p>ARM Holdings doesn't manufacture chips — it designs processors and processor architectures, then licenses those designs to other companies to build into their own products.</p>
+                </div>
+                <div class="card">
+                    <h3>The Instruction Set</h3>
+                    <p>A highly regular 32-bit instruction set, paired with Thumb — a re-encoded 16-bit subset that improves code density and performance on narrower memory buses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 17 — ARM Products -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.6 &nbsp;ARM ARCHITECTURE</p>
+            <h2>The Cortex Family</h2>
+
+            <div class="grid-3">
+                <div class="card">
+                    <span class="tag">CORTEX-A</span>
+                    <h3>Application</h3>
+                    <p>For smartphones, tablets, and similar devices. Runs full OSes like Android or Linux via a memory management unit (MMU).</p>
+                </div>
+                <div class="card">
+                    <span class="tag">CORTEX-R</span>
+                    <h3>Real-Time</h3>
+                    <p>Built for rapid, predictable responses — automotive braking systems, storage controllers. Usually no MMU, but has a memory protection unit (MPU).</p>
+                </div>
+                <div class="card">
+                    <span class="tag">CORTEX-M</span>
+                    <h3>Microcontroller</h3>
+                    <p>Optimized for lowest power and gate count. Powers IoT devices and sensor/actuator networks. Uses Thumb-2 only.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 18 — 1.7 Cloud Computing Basics -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.7 &nbsp;CLOUD COMPUTING</p>
+            <h2>What Is Cloud Computing?</h2>
+
+            <div class="definition-box">
+                <h3>NIST Definition</h3>
+                <p>A model for enabling convenient, on-demand network access to a shared pool of configurable computing resources — networks, servers, storage, applications, services — that can be quickly provisioned with minimal management effort.</p>
+            </div>
+
+            <ul class="list-check" style="margin-top:22px;">
+                <li>Delivers <strong>economies of scale</strong> plus professional network and security management</li>
+                <li>Users pay only for what they use — no hardware to buy or maintain</li>
+                <li><strong>Cloud networking</strong> is the infrastructure connecting subscribers to the cloud</li>
+                <li><strong>Cloud storage</strong> is database storage and applications hosted remotely</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 19 — Cloud Service Models -->
+    <!-- ==================== -->
+
+    <section class="slide">
+        <div class="slide-content">
+            <p class="slide-eyebrow">1.7 &nbsp;CLOUD COMPUTING</p>
+            <h2>Three Cloud Service Models</h2>
+
+            <div class="grid-3">
+                <div class="card">
+                    <span class="tag">SAAS</span>
+                    <h3>Software as a Service</h3>
+                    <p>Ready-to-use applications running in the cloud, reached through a browser — e.g. Gmail, Salesforce.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">PAAS</span>
+                    <h3>Platform as a Service</h3>
+                    <p>An operating system in the cloud — languages, runtimes, and tools for building and deploying your own apps, like Google App Engine.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">IAAS</span>
+                    <h3>Infrastructure as a Service</h3>
+                    <p>Raw virtual machines, storage, and networking to run whatever software you need — e.g. Amazon EC2, Windows Azure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SLIDE 20 — Thank You / Any Questions -->
+    <!-- ==================== -->
+
+    <section class="slide">
+
+        <div class="hero">
+
+            <div class="hero-line"></div>
+
+            <p class="small-title">PAPAYA SA TINOLA</p>
+
+            <h1>
+                <span class="accent">THANK YOU</span>
+            </h1>
+
+            <p class="subtitle">
+                Any Questions?
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div class="progress">
+
+    <span class="dot active" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 4"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 5"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 6"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 7"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 8"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 9"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 10"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 11"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 12"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 13"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 14"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 15"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 16"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 17"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 18"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 19"></span>
+    <span class="dot" tabindex="0" role="button" aria-label="Go to slide 20"></span>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
